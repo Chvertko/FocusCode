@@ -6,10 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import com.focuscode.ui.blockedapps.BlockedAppsScreen
+import com.focuscode.di.SimpleModule
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SimpleModule.init(this.applicationContext)
         setContent {
             App()
         }
